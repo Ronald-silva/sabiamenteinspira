@@ -1,8 +1,10 @@
 :root {
-    --primary-color: #2c3e50; /* Azul escuro - para títulos e texto principal */
-    --secondary-color: #f39c12; /* Laranja/Dourado da sua logo - para botões e destaque */
-    --background-color: #ecf0f1; /* Cinza claro - para o fundo */
-    --text-color: #34495e; /* Cinza escuro - para corpo de texto */
+    --background-color: #0c141c;       /* Azul profundo/cósmico */
+    --container-color: #1d2b3a;       /* Container um pouco mais claro */
+    --accent-gold: #f39c12;            /* Dourado/Laranja para destaque */
+    --accent-gold-hover: #e67e22;      /* Hover do dourado */
+    --text-light: #E2E8F0;             /* Texto claro principal */
+    --text-green-accent: #4FD1C5;      /* Verde para descrição */
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -14,87 +16,71 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: var(--text-color);
+    color: var(--text-light);
 }
 
 .container {
-    max-width: 500px;
+    max-width: 400px;
+    width: 90%;
     padding: 2rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.title {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+.content {
+    background: var(--container-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--secondary-color);
-    margin-top: 0;
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--accent-gold);
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    margin: 0;
 }
 
 .description {
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.ebook-mockup img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+    margin-top: 0.5rem;
     margin-bottom: 2rem;
+    color: var(--text-green-accent);
 }
 
-.form-container {
+.link-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-#email-input {
-    padding: 0.8rem 1.5rem;
-    margin-bottom: 2rem;
-    border: 2px solid #bdc3c7;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-#email-input:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-}
-
-.cta-button {
-    padding: 1rem 2rem;
-    background-color: var(--secondary-color);
+.link-button {
+    display: block;
+    padding: 1rem;
+    background-color: var(--accent-gold);
     color: #fff;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: 700;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cta-button:hover {
-    background-color: #e67e22;
+.link-button:hover {
+    background-color: var(--accent-gold-hover);
+    transform: scale(1.03);
 }
 
-.cta-button:active {
-    transform: translateY(2px);
-}
-
-.legal-text {
-    font-size: 0.8rem;
-    color: #95a5a6;
-    margin-top: 1rem;
+.link-button:active {
+    transform: scale(0.98);
 }
