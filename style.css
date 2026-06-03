@@ -250,9 +250,11 @@ h1, h2, h3, h4 {
 
 .book-cover {
   width: 100%;
-  max-width: 380px;
-  border-radius: 12px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  max-width: 420px;
+  max-height: 440px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(16, 185, 129, 0.15);
 }
 
 /* PAIN SECTION */
